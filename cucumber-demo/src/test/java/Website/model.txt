@@ -1,0 +1,42 @@
+States
+- Not logged in (starting state)
+- Browsing Products
+- Search
+- Viewing Product Details
+- Adding Product to Cart
+- View Cart
+- Checking out
+- Remove Product from Cart
+
+
+Variables
+Updated List of State Variables to Track:
+6 boolean variables - initial value
+    - notLoggedIn - true
+    - browsingProduct - false
+    - productSearched - false
+    - productInCart - false
+    - productDetailsViewed - false
+    - checkoutInitiated - false
+
+Transitions
+
+- Click on Category (from Not Logged in to Browsing Products)
+  - Not Logged in -> Browsing Products (NotLoggedIn - true, BrowsingProduct - true)
+
+- Write in Search (from Browsing products to Search)
+   - Browsing products -> Search   (BrowsingProduct - false, ProductSearched - true)
+
+- Click on Product (from Search to Viewing Product Details)
+   - Search -> Viewing Product Details   (ProductSearched = true, ProductDetailsViewed = true)
+
+- Click on Add button (from Viewing Product Details to Adding Product to Cart)
+  - Viewing Product Details -> Adding Product to Cart (ProductDetailsViewed = true, ProductInCart - true)
+
+- Click on Remove button (from View Cart to Removing Product from Cart)
+  - View Cart -> Removing Product from Cart (ProductInCart - true, ProductInCart - false)
+
+- Checkout (from View Cart to Checking out)
+   - View Cart -> Checking out (ProductInCart - true, CheckoutInitiated - true)
+
+
