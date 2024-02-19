@@ -46,3 +46,7 @@ Feature: Product Categories Reachability
     And there should be at least 5 products in the search results
     When I click on the first one in the results
     Then I should go to the details page for that skirt
+    Then I should click on add button to cart for that skirt
+    Then the cart items should display
+    Then I should click on remove from cart for that skirt
+    Then I should click on checkout for that skirt
